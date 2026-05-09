@@ -1,0 +1,55 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Allow authenticated users to upload to specific folders
+    match /{allPaths=**} {
+      // Allow read for authenticated users
+      allow read: if request.auth != null;
+      
+      // Allow write for authenticated users to specific folders
+      allow write: if request.auth != null 
+        && (
+          // Admin can upload to any folder
+          request.auth.token.role == 'admin' ||
+          // Merchants can upload to products and documents folders
+          (request.auth.token.role == 'merchant' && 
+           (resource.name.matches('products/.*') || 
+            resource.name.matches('documents/.*') ||
+            resource.name.matches('stores/.*'))) ||
+          // Allow uploads to categories and banners (for admin)
+          resource.name.matches('categories/.*') ||
+          resource.name.matches('banners/.*')
+        );
+    }
+    
+    // More specific rules for better security
+    match /categories/{fileName} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.token.role == 'admin';
+    }
+    
+    match /banners/{fileName} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.token.role == 'admin';
+    }
+    
+    match /products/{fileName} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && 
+        (request.auth.token.role == 'admin' || request.auth.token.role == 'merchant');
+    }
+    
+    match /documents/{fileName} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && 
+        (request.auth.token.role == 'admin' || request.auth.token.role == 'merchant');
+    }
+    
+    match /stores/{fileName} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && 
+        (request.auth.token.role == 'admin' || request.auth.token.role == 'merchant');
+    }
+  }
+}
+

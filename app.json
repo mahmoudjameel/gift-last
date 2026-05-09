@@ -1,0 +1,113 @@
+{
+  "expo": {
+    "name": "Petalia",
+    "slug": "Petalia",
+    "version": "2.1.0",
+    "orientation": "portrait",
+    "newArchEnabled": true,
+    "icon": "./assets/images/icon.png",
+    "scheme": "Petalia",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "app.Petalia.marketplace",
+      "buildNumber": "2.1.0",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSPhotoLibraryUsageDescription": "Petalia needs access to your photo library to let you upload a profile picture and share product images or documents in the chat.",
+        "NSCameraUsageDescription": "Petalia needs access to your camera to let you take a profile picture or capture photos to share with other users in the chat.",
+        "NSCalendarUsageDescription": "Petalia needs access to your calendar to help you save and track important order dates and occasions.",
+        "NSLocationWhenInUseUsageDescription": "Petalia uses your location to show the map, suggest delivery addresses, and find nearby stores.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Petalia uses your location to show the map and delivery options while you use the app."
+      },
+      "config": {
+        "googleMapsApiKey": "AIzaSyAoABx4uMQu5JPa21VMFPKBJQoXBWJxLro"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#FFFFFF",
+        "foregroundImage": "./assets/images/adaptive-icon.png"
+      },
+      "permissions": [
+        "NOTIFICATIONS",
+        "POST_NOTIFICATIONS",
+        "RECEIVE_BOOT_COMPLETED",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ],
+      "predictiveBackGestureEnabled": false,
+      "package": "app.Petalia.marketplace",
+      "versionCode": 2,
+      "googleServicesFile": "./google-services.json",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyAoABx4uMQu5JPa21VMFPKBJQoXBWJxLro"
+        }
+      }
+    },
+    "web": {
+      "output": "single",
+      "image": "./assets/images/splash-icon.png"
+    },
+    "plugins": [
+      [
+        "react-native-maps",
+        {
+          "iosGoogleMapsApiKey": "AIzaSyAoABx4uMQu5JPa21VMFPKBJQoXBWJxLro",
+          "androidGoogleMapsApiKey": "AIzaSyAoABx4uMQu5JPa21VMFPKBJQoXBWJxLro"
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "resizeMode": "contain",
+          "backgroundColor": "#FFFFFF",
+          "dark": {
+            "image": "./assets/images/splash-icon.png",
+            "backgroundColor": "#1A202C"
+          }
+        }
+      ],
+      "expo-web-browser",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Petalia uses your location for the map and delivery address.",
+          "isAndroidBackgroundLocationEnabled": false
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/images/icon.png",
+          "color": "#ffffff",
+          "mode": "production",
+          "androidMode": "default",
+          "androidCollapsedTitle": "Petalia"
+        }
+      ],
+      "@react-native-community/datetimepicker"
+    ],
+    "experiments": {
+      "reactCompiler": true
+    },
+    "extra": {
+      "googleMapsApiKey": "AIzaSyAoABx4uMQu5JPa21VMFPKBJQoXBWJxLro",
+      "firebaseApiKey": "AIzaSyC5A1TP8eJ_Ss3mjEe30ve3cPYWunt1yDA",
+      "firebaseAuthDomain": "petalia-383ec.firebaseapp.com",
+      "firebaseProjectId": "petalia-383ec",
+      "firebaseStorageBucket": "petalia-383ec.firebasestorage.app",
+      "firebaseDatabaseUrl": "https://petalia-383ec-default-rtdb.firebaseio.com",
+      "firebaseMessagingSenderId": "945449483673",
+      "firebaseAppId": "1:945449483673:web:ed4280d24beb4f34aea708",
+      "firebaseMeasurementId": "G-B1JS6HJ739",
+      "eas": {
+        "projectId": "29cc6462-f9de-4458-a045-801983336ab7"
+      }
+    }
+  }
+}

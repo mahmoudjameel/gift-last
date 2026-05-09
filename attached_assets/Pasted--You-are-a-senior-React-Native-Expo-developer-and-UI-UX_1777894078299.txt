@@ -1,0 +1,100 @@
+
+
+You are a senior React Native (Expo) developer and UI/UX designer.
+I already have a fully working production mobile app. Your task is ONLY to update the UI design, branding, and logo, without affecting any functionality.
+
+⚠️ CRITICAL RULE (MOST IMPORTANT)
+* DO NOT change any functionality
+* DO NOT modify any API calls or network requests
+* DO NOT change backend logic or business logic
+* DO NOT remove or add features
+* ONLY update UI / styling / branding
+
+📌 New Branding
+* App Name: Petalia
+* Business: Flowers, gifts, and cakes delivery app
+Replace all old branding with Petalia across the UI only.
+
+🎨 New Design System (Global Theme)
+Primary Colors:
+* Soft Pink: #F7C6D9
+* Rose Pink: #E88AAE
+Secondary Colors:
+* Sage Green: #A8C3A0
+* Cream Background: #FFF6F9
+Text Color:
+* Dark Plum: #4A2C3A
+
+✨ UI Style Requirements
+* Modern, clean, minimal UI redesign only
+* Soft rounded corners (large border radius)
+* Light and elegant backgrounds
+* Very subtle shadows (premium feel)
+* Floral / gift emotional aesthetic
+* Consistent spacing and layout system
+
+🧭 Typography
+* Arabic: Cairo or Tajawal
+* English:
+    * Headings: Playfair Display
+    * Body: Poppins
+
+🧩 What You MUST DO (UI ONLY)
+1. Branding Update
+* Replace all old app name with Petalia
+* Update:
+    * Splash screen
+    * Headers
+    * Navigation titles
+    * Any visible branding text
+
+2. Create / Update Theme System
+* Build a centralized theme file:
+    * colors
+    * typography
+    * spacing
+    * border radius
+* Ensure the entire app uses this theme consistently
+
+3. UI Redesign ONLY (No logic changes)
+Update visual design of:
+* Buttons
+* Cards
+* Inputs
+* Modals
+* Navigation
+* All screens
+
+4. Logo Design (IMPORTANT)
+Create a new professional logo for the app "Petalia".
+The logo must:
+* Be modern, minimal, and elegant
+* Reflect flowers, petals, or gifting concept
+* Match the new color palette
+* Work well as:
+    * App icon
+    * Splash screen logo
+    * Header logo
+Style requirements:
+* Clean and simple (not complex or noisy)
+* Premium and brandable
+* Can include abstract flower/petal shape or elegant “P” letter mark
+* Must feel suitable for a high-quality mobile app
+
+5. Screens to restyle (UI only)
+* Home screen
+* Product listing (flowers, gifts, cakes)
+* Product details
+* Cart
+* Checkout
+* Profile
+
+❌ STRICTLY FORBIDDEN
+* No API changes
+* No logic changes
+* No state management changes
+* No backend changes
+* No feature modifications
+
+🎯 GOAL
+Transform the current app into a premium, elegant UI experience under the new brand Petalia, including a new professional logo, while keeping all existing functionality exactly the same.

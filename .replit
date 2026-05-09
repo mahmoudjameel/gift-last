@@ -1,0 +1,47 @@
+modules = ["nodejs-20", "python-3.11"]
+[agent]
+expertMode = true
+stack = "BEST_EFFORT_FALLBACK"
+
+[nix]
+channel = "stable-25_05"
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Start application"
+
+[[workflows.workflow]]
+name = "Start application"
+author = "agent"
+
+[workflows.workflow.metadata]
+outputType = "webview"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npx expo start --web --port 5000"
+waitForPort = 5000
+
+[[ports]]
+localPort = 5000
+externalPort = 80
+
+[deployment]
+deploymentTarget = "autoscale"
+run = ["npm", "run", "web"]
+publicDir = "dist"
+
+[userenv]
+
+[userenv.shared]
+EXPO_PUBLIC_GOOGLE_MAPS_API_KEY = "AIzaSyC6Wl791GvnQmixrZmDZeejSte-397nHLY"
+EXPO_PUBLIC_GOOGLE_MAPS_IOS_KEY = "78aa2a45686e3c3bd25b19b0"
+EXPO_PUBLIC_GOOGLE_MAPS_ANDROID_KEY = "78aa2a45686e3c351bf0e2c7"
