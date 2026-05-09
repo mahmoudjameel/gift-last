@@ -24,7 +24,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import NotificationBell from "@/components/NotificationBell";
-import logoUrl from "@assets/شعار_غلوردا_1764881546720.jpg";
+import logoUrl from "@assets/kado-logo.jpg";
 
 interface DashboardLayoutProps {
   children: React.ReactNode;
@@ -83,7 +83,7 @@ export default function DashboardLayout({ children, role }: DashboardLayoutProps
             <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-sidebar-primary/20">
               <img src={logoUrl} alt="Logo" className="w-full h-full object-cover" />
             </div>
-            <span className="font-display text-foreground">Petalia</span>
+            <span className="font-display text-foreground">KADO</span>
           </div>
           <Button
             variant="ghost"

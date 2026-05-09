@@ -654,7 +654,7 @@ export default function CartScreen() {
     const isArabic = language === 'ar';
     if (currentStep === 0) {
       const msgs = isArabic
-        ? ['يلا كمّل! 🔥', 'ذوقك عالي والله!', 'اختيارات حلوة! يلا التالي']
+        ? ['هيا كمّل! 🔥', 'ذوقك رفيع!', 'اختيارات حلوة! هيا التالي']
         : ['יאללה, ממשיכים! 🔥', 'יש לך טעם מעולה!', 'בחירות נהדרות! ממשיכים'];
       return { message: msgs[Math.floor(Math.random() * msgs.length)], mood: 'excited' as const };
     }
@@ -671,7 +671,7 @@ export default function CartScreen() {
       return { message: isArabic ? 'فرع ممتاز! شوف المواعيد' : 'סניף מצוין! בדוק/י את הזמנים', mood: 'welcome' as const };
     }
     const payMsgs = isArabic
-      ? ['اختر طريقة الدفع وأكمل طلبك 💳', 'خطوة أخيرة! ادفع وطلبك يجهز 🎉', 'يلا ادفع وطلبك بيوصلك! ✨']
+      ? ['اختر طريقة الدفع وأكمل طلبك 💳', 'خطوة أخيرة! ادفع وطلبك يجهز 🎉', 'هيا ادفع وطلبك بيوصلك! ✨']
       : ['בחר/י אמצעי תשלום והשלם/י את ההזמנה 💳', 'שלב אחרון! שלם/י וההזמנה תטופל 🎉', 'יאללה, משלמים וההזמנה בדרך! ✨'];
     return { message: payMsgs[Math.floor(Math.random() * payMsgs.length)], mood: 'excited' as const };
   }, [currentStep, deliveryMethod, selectedAddress, selectedBranch, language]);

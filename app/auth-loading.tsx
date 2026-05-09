@@ -10,7 +10,8 @@ import { useRouter } from 'expo-router';
 import { useApp } from '@/contexts/AppContext';
 import { isFirebaseConfigured } from '@/services/firebase';
 import { getMerchantStatus, getCurrentMerchantId } from '@/services/merchantFirestore';
-import PetaliaLogo from '@/components/PetaliaLogo';
+import { Image } from 'expo-image';
+const kadoLogo = require('@/assets/images/kado-logo.jpeg');
 
 export default function AuthLoadingScreen() {
   const router = useRouter();
@@ -137,12 +138,12 @@ export default function AuthLoadingScreen() {
           ]}
         >
           <View style={styles.logoBg}>
-            <PetaliaLogo size={90} color="#E88AAE" />
+            <Image source={kadoLogo} style={{ width: 90, height: 90, borderRadius: 16 }} contentFit="contain" />
           </View>
         </Animated.View>
 
         <Animated.View style={[styles.textContainer, { opacity: textFadeAnim }]}>
-          <Text style={styles.brandName}>Petalia</Text>
+          <Text style={styles.brandName}>KADO</Text>
           <Text style={styles.subtitle}>جارٍ تسجيل الدخول</Text>
 
           <View style={styles.dotsRow}>
@@ -165,7 +166,7 @@ export default function AuthLoadingScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFF6F9',
+    backgroundColor: '#FFFFFF',
   },
   content: {
     flex: 1,
@@ -182,7 +183,7 @@ const styles = StyleSheet.create({
     width: 120,
     height: 120,
     borderRadius: 60,
-    backgroundColor: '#FCE4EE',
+    backgroundColor: '#FCE4F0',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -193,14 +194,14 @@ const styles = StyleSheet.create({
   brandName: {
     fontSize: 32,
     fontWeight: '800' as const,
-    color: '#E88AAE',
+    color: '#D91568',
     marginBottom: 8,
     letterSpacing: 2,
   },
   subtitle: {
     fontSize: 15,
     fontWeight: '500' as const,
-    color: '#8B6070',
+    color: '#555555',
     opacity: 0.8,
     marginBottom: 20,
   },
@@ -213,6 +214,6 @@ const styles = StyleSheet.create({
     width: 8,
     height: 8,
     borderRadius: 4,
-    backgroundColor: '#E88AAE',
+    backgroundColor: '#D91568',
   },
 });

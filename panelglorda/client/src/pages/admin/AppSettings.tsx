@@ -1402,7 +1402,7 @@ export default function AppSettings() {
                 <div className="rounded-lg border p-4 bg-muted/20">
                   <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
                     <div>
-                      <h4 className="font-semibold">إضافة بيانات تجريبية واقعية (Petalia)</h4>
+                      <h4 className="font-semibold">إضافة بيانات تجريبية واقعية (KADO)</h4>
                       <p className="text-sm text-muted-foreground mt-1">
                         يضيف تلقائياً تصنيفات (زهور، كوزمتكس، كيك، عطور) مع متاجر ومنتجات وصور حقيقية قريبة لسيناريو التطبيق.
                       </p>

@@ -349,7 +349,7 @@ export default function MerchantSettings() {
                     />
                   </div>
                 </div>
-                <p className="text-xs text-muted-foreground">رابط متجرك: glorda.com/{username || "username"}</p>
+                <p className="text-xs text-muted-foreground">رابط متجرك: kado.app/{username || "username"}</p>
               </div>
 
               <div className="space-y-2">

@@ -10,7 +10,7 @@ import { ShieldCheck, Loader2, Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
-import logoUrl from "@assets/شعار_غلوردا_1764881546720.jpg";
+import logoUrl from "@assets/kado-logo.jpg";
 import { auth } from "@/lib/firebase";
 import { signInWithEmailAndPassword, signOut, createUserWithEmailAndPassword } from "firebase/auth";
 import { getDocData, setDocData } from "@/lib/firestore";
@@ -107,7 +107,7 @@ export default function AdminLogin() {
                     <FormItem>
                       <FormLabel>البريد الإلكتروني</FormLabel>
                       <FormControl>
-                        <Input placeholder="admin@petalia.com" {...field} className="font-mono text-right" data-testid="input-admin-email" />
+                        <Input placeholder="admin@kado.app" {...field} className="font-mono text-right" data-testid="input-admin-email" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>

@@ -260,7 +260,7 @@ export default function EditProductScreen() {
     <View style={[styles.container, { backgroundColor: colors.background }]}>
       <StatusBar barStyle="light-content" />
       <LinearGradient
-        colors={['#E88AAE', '#D4709A']}
+        colors={['#D91568', '#B0145A']}
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 1 }}
         style={styles.headerGradient}
@@ -599,7 +599,7 @@ export default function EditProductScreen() {
           disabled={isSaving}
         >
           <LinearGradient
-            colors={['#E88AAE', '#D4709A']}
+            colors={['#D91568', '#B0145A']}
             start={{ x: 0, y: 0 }}
             end={{ x: 1, y: 1 }}
             style={styles.saveButtonGradient}

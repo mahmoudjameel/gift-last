@@ -200,7 +200,7 @@ export default function MerchantProductsScreen() {
                 onPress={() => router.push('/(merchant-tabs)/products/add-product' as any)}
               >
                 <LinearGradient
-                  colors={['#E88AAE', '#D4709A']}
+                  colors={['#D91568', '#B0145A']}
                   start={{ x: 0, y: 0 }}
                   end={{ x: 1, y: 1 }}
                   style={styles.addButtonGradient}

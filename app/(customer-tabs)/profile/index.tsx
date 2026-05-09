@@ -230,7 +230,7 @@ export default function ProfileScreen() {
         <View style={styles.overlay}>
           <Animated.View style={[styles.switchContent, { opacity: switchAnim }]}>
             <Animated.View style={{ transform: [{ rotateY: logoFlip }] }}>
-              <PetaliaLogo size={90} color="#E88AAE" />
+              <PetaliaLogo size={90} color="#D91568" />
             </Animated.View>
             <Text style={styles.switchText}>{switchTitle}</Text>
           </Animated.View>
@@ -266,7 +266,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: -2,
     right: -2,
-    backgroundColor: '#E88AAE',
+    backgroundColor: '#D91568',
     borderRadius: 10,
     minWidth: 18,
     height: 18,

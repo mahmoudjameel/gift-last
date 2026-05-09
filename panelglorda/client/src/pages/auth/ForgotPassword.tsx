@@ -9,7 +9,7 @@ import { Link } from "wouter";
 import { Mail, Loader2, ArrowRight, CheckCircle } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-import logoUrl from "@assets/شعار_غلوردا_1764881546720.jpg";
+import logoUrl from "@assets/kado-logo.jpg";
 import { auth } from "@/lib/firebase";
 import { sendPasswordResetEmail } from "firebase/auth";
 

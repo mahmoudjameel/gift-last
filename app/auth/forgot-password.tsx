@@ -98,7 +98,7 @@ export default function ForgotPasswordScreen() {
           <View style={styles.inputGroup}>
             <Text style={styles.label}>رقم الجوال</Text>
             <View style={styles.inputContainer}>
-              <Text style={styles.phonePrefix}>966+</Text>
+              <Text style={styles.phonePrefix}>972+</Text>
               <TextInput
                 style={[styles.input, styles.phoneInput, { textAlign: isRTL ? 'right' : 'left' }]}
                 placeholder="5XXXXXXXX"

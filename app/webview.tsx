@@ -12,7 +12,7 @@ export default function AppWebViewScreen() {
   const { colors, isRTL } = useApp();
   const [loading, setLoading] = useState(true);
 
-  const pageTitle = typeof params.title === 'string' && params.title.trim() ? params.title : 'Petalia';
+  const pageTitle = typeof params.title === 'string' && params.title.trim() ? params.title : 'KADO';
   const pageUrl = typeof params.url === 'string' ? params.url : '';
 
   const isValidUrl = /^https?:\/\//i.test(pageUrl);

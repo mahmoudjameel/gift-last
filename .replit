@@ -27,12 +27,16 @@ outputType = "webview"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "cd panelglorda && npm run dev"
+args = "EXPO_NO_WATCHMAN=1 bunx rork start -p ygyqugk96ng2f8azk6qnp --web --tunnel --port 5000"
 waitForPort = 5000
 
 [[ports]]
 localPort = 5000
 externalPort = 80
+
+[[ports]]
+localPort = 8081
+externalPort = 8081
 
 [deployment]
 deploymentTarget = "autoscale"

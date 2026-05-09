@@ -126,7 +126,7 @@ export default function MerchantStoreScreen() {
     try {
       if (!storeLink) return;
       setShowShareModal(false);
-      const title = storeName || (language === 'ar' ? 'متجر Petalia' : 'חנות Petalia');
+      const title = storeName || (language === 'ar' ? 'متجر KADO' : 'חנות KADO');
       const message = language === 'ar' ? `متجر: ${title}` : `חנות: ${title}`;
       await Share.share({
         title,
@@ -171,7 +171,7 @@ export default function MerchantStoreScreen() {
           style={({ pressed }) => [{ opacity: pressed ? 0.85 : 1 }]}
         >
           <LinearGradient
-            colors={['#C4658A', '#D4709A', '#E88AAE']}
+            colors={['#8B0F3A', '#B0145A', '#D91568']}
             start={{ x: 1, y: 0 }}
             end={{ x: 0, y: 1 }}
             style={[styles.storeHeader, { pointerEvents: 'box-none' as const }]}
@@ -194,7 +194,7 @@ export default function MerchantStoreScreen() {
                 <Text style={styles.storeBannerName}>{storeName}</Text>
                 <View style={styles.partnerBadge}>
                   <ShieldCheck size={12} color="#FFF" />
-                  <Text style={styles.partnerText}>Petalia {t('partner')}</Text>
+                  <Text style={styles.partnerText}>KADO {t('partner')}</Text>
                 </View>
               </View>
             </View>
@@ -360,7 +360,7 @@ export default function MerchantStoreScreen() {
         <View style={styles.switchOverlay}>
           <Animated.View style={[styles.switchModalContent, { opacity: switchAnim }]}>
             <Animated.View style={{ transform: [{ rotateY: logoFlip }] }}>
-              <PetaliaLogo size={90} color="#E88AAE" />
+              <PetaliaLogo size={90} color="#D91568" />
             </Animated.View>
             <Text style={[styles.switchModalText, { color: '#FFF' }]}>{t('switchingToCustomer')}</Text>
           </Animated.View>
@@ -409,7 +409,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: -2,
     right: -2,
-    backgroundColor: '#E88AAE',
+    backgroundColor: '#D91568',
     borderRadius: 10,
     minWidth: 18,
     height: 18,

@@ -47,7 +47,7 @@ const slides: OnboardingSlide[] = [
     image: 'https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w=900&q=80',
     titleAr: 'هدايا لكل المناسبات',
     titleHe: 'מתנות לכל אירוע',
-    descAr: 'اختار الهدية الحلوة لأحبائك مع توصيل سريع وموثوق لجميع المدن',
+    descAr: 'اختار الهدية الحلوة لأحبائك مع توصيل سريع وموثوق لجميع المناطق',
     descHe: 'בחר את המתנה המושלמת לאהוביך עם משלוח מהיר ואמין לכל הערים',
   },
 ];
@@ -129,7 +129,7 @@ export default function OnboardingScreen() {
 
       <View style={styles.langBtnWrap}>
         <TouchableOpacity style={styles.langBtn} onPress={toggleLang} activeOpacity={0.8}>
-          <Globe size={16} color="#E88AAE" />
+          <Globe size={16} color="#D91568" />
           <Text style={styles.langBtnText}>{language === 'ar' ? 'עברית' : 'العربية'}</Text>
         </TouchableOpacity>
       </View>
@@ -156,7 +156,7 @@ export default function OnboardingScreen() {
                   {
                     width: dotWidth,
                     opacity,
-                    backgroundColor: '#E88AAE',
+                    backgroundColor: '#D91568',
                   },
                 ]}
               />
@@ -175,7 +175,7 @@ export default function OnboardingScreen() {
             activeOpacity={0.8}
           >
             <Text style={styles.nextText}>
-              {isLast ? (isAr ? 'يلا نبدأ' : 'בוא נתחיל') : (isAr ? 'التالي' : 'הבא')}
+              {isLast ? (isAr ? 'هيا نبدأ' : 'בוא נתחיל') : (isAr ? 'التالي' : 'הבא')}
             </Text>
           </TouchableOpacity>
         </View>
@@ -277,7 +277,7 @@ const styles = StyleSheet.create({
     color: 'rgba(255,255,255,0.7)',
   },
   nextBtn: {
-    backgroundColor: '#E88AAE',
+    backgroundColor: '#D91568',
     paddingVertical: 14,
     paddingHorizontal: 36,
     borderRadius: 14,

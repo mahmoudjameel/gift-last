@@ -65,8 +65,8 @@ export default function DashboardScreen() {
   const statsCards = useMemo(() => [
     {
       icon: BadgeDollarSign,
-      iconBg: '#FCE4EE',
-      iconColor: '#E88AAE',
+      iconBg: 'rgba(217,21,104,0.1)',
+      iconColor: '#D91568',
       title: t('totalSales'),
       value: `${liveStats.totalRevenue.toLocaleString('en-US', { minimumFractionDigits: 2 })} ${t('sar')}`,
       subtitle: t('totalSalesCompleted'),

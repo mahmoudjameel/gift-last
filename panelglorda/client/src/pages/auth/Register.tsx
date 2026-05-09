@@ -18,7 +18,7 @@ import { Store, Plus, Trash2, Loader2, ChevronsUpDown, Check, Eye, EyeOff, FileT
 import { useState, useEffect } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { useQuery } from "@tanstack/react-query";
-import logoUrl from "@assets/شعار_غلوردا_1764881546720.jpg";
+import logoUrl from "@assets/kado-logo.jpg";
 import { cn } from "@/lib/utils";
 import { uploadToStorage } from "@/lib/storage-upload";
 import { auth } from "@/lib/firebase";
@@ -240,7 +240,7 @@ export default function Register() {
               <img src={logoUrl} alt="Logo" className="w-full h-full object-cover" data-testid="img-logo" />
             </div>
           </div>
-          <h1 className="text-3xl font-bold tracking-tight font-display text-primary">انضم إلى Petalia</h1>
+          <h1 className="text-3xl font-bold tracking-tight font-display text-primary">انضم إلى KADO</h1>
           <p className="text-muted-foreground">سجل متجرك وابدأ في بيع منتجاتك لآلاف العملاء</p>
         </div>
 
@@ -301,7 +301,7 @@ export default function Register() {
                           />
                         </FormControl>
                         <p className="text-xs text-muted-foreground">
-                          أحرف إنجليزية صغيرة وأرقام و _ فقط • سيكون رابط متجرك: petalia.com/{field.value || "username"}
+                          أحرف إنجليزية صغيرة وأرقام و _ فقط • سيكون رابط متجرك: kado.app/{field.value || "username"}
                         </p>
                         <FormMessage />
                       </FormItem>

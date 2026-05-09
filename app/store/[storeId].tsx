@@ -203,7 +203,7 @@ export default function StoreProfileScreen() {
     try {
       if (!storeId) return;
       const shareUrl = `https://us-central1-glorda.cloudfunctions.net/s/${encodeURIComponent(storeId)}`;
-      const storeTitle = store?.name ?? (language === 'ar' ? 'متجر Petalia' : 'חנות Petalia');
+      const storeTitle = store?.name ?? (language === 'ar' ? 'متجر KADO' : 'חנות KADO');
       const message = language === 'ar' ? `متجر: ${storeTitle}` : `חנות: ${storeTitle}`;
       await Share.share({
         title: storeTitle,

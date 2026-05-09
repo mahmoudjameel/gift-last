@@ -445,7 +445,7 @@ export default function MerchantRegisterScreen() {
               maxLength={24}
             />
             <Text style={[styles.ibanHint, { color: colors.textMuted }]}>
-              {language === 'ar' ? 'رقم الآيبان السعودي يتكون من 24 حرف ورقم' : 'Saudi IBAN is 24 characters'}
+              {language === 'ar' ? 'رقم الآيبان يبدأ بـ IL ويتكون من 23 حرف ورقم' : 'Israeli IBAN starts with IL (23 characters)'}
             </Text>
           </View>
 

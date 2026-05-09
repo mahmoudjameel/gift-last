@@ -13,6 +13,26 @@ const path = require("path");
 
 const config = getDefaultConfig(__dirname);
 
+config.watcher = {
+  ...config.watcher,
+  watchman: {
+    deferStates: [],
+  },
+  healthCheck: {
+    enabled: false,
+    interval: 30000,
+    timeout: 10000,
+    filePrefix: '.metro-health-check',
+  },
+};
+
+config.resolver.blockList = [
+  /panelglorda\/.*/,
+  /\.git\/.*/,
+  /android\/.*/,
+  /ios\/.*/,
+];
+
 const originalResolveRequest = config.resolver.resolveRequest;
 
 config.resolver.resolveRequest = (context, moduleName, platform) => {

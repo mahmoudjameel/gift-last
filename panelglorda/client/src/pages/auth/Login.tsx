@@ -14,7 +14,7 @@ import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 import { useQuery } from "@tanstack/react-query";
-import logoUrl from "@assets/شعار_غلوردا_1764881546720.jpg";
+import logoUrl from "@assets/kado-logo.jpg";
 import { auth } from "@/lib/firebase";
 import { signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { getDocData } from "@/lib/firestore";

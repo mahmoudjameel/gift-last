@@ -202,7 +202,7 @@ export async function deletePromotionalAd(id: string) {
   await deleteDoc(doc(db, "promotionalAds", id));
 }
 
-// Seed realistic demo catalog data for Petalia
+// Seed realistic demo catalog data for KADO
 export async function seedPetaliaDemoData() {
   const now = serverTimestamp();
   const batch = writeBatch(db);
@@ -216,7 +216,7 @@ export async function seedPetaliaDemoData() {
       nameEn: "פרחים",
       icon: "https://images.pexels.com/photos/931177/pexels-photo-931177.jpeg",
       image: "https://images.pexels.com/photos/931177/pexels-photo-931177.jpeg",
-      color: "#E88AAE",
+      color: "#D91568",
       sortOrder: 1,
     },
     {
@@ -227,7 +227,7 @@ export async function seedPetaliaDemoData() {
       nameEn: "קוסמטיקה",
       icon: "https://images.pexels.com/photos/2113855/pexels-photo-2113855.jpeg",
       image: "https://images.pexels.com/photos/2113855/pexels-photo-2113855.jpeg",
-      color: "#D4709A",
+      color: "#B0145A",
       sortOrder: 2,
     },
     {

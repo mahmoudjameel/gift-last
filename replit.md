@@ -1,20 +1,19 @@
-# Petalia - Flower & Gift Delivery App
+# KADO - Flower & Gift Delivery App
 
 ## Overview
 
-Petalia is a React Native / Expo mobile application for flower, gift, cake, and chocolate delivery in Saudi Arabia. It supports both customer and merchant user roles with separate tab navigations. The app is built with Expo Router and runs as a web application. All mock/seed data has been cleared — the app starts with a completely empty state ready for real data.
+KADO is a React Native / Expo mobile application for flower, gift, cake, and cosmetics delivery targeting Palestinians (Arab 48) in Israel. It supports both customer and merchant user roles with separate tab navigations. The app is built with Expo Router and runs as a web application. All mock/seed data has been cleared — the app starts with a completely empty state ready for real data.
 
-## Brand Identity (Petalia)
+## Brand Identity (KADO)
 
-- **Primary Rose Pink**: `#E88AAE`
-- **Primary Dark**: `#D4709A`
-- **Primary Light**: `#FCE4EE`
-- **Soft Pink**: `#F7C6D9`
-- **Cream Background**: `#FFF6F9`
-- **Dark Plum (text)**: `#4A2C3A`
-- **Sage Green (accent)**: `#A8C3A0`
-- **Glass**: `rgba(255,246,249,0.72)` with border `rgba(232,138,174,0.25)`
-- **Logo**: `components/PetaliaLogo.tsx` — SVG petal/flower shape component
+- **Primary KADO Pink**: `#D91568`
+- **Primary Dark**: `#B0145A`
+- **Background**: `#FFFFFF` (white)
+- **Dark Background**: `#0D0D0D`
+- **Text**: `#1A1A1A` (near black)
+- **Logo**: `components/PetaliaLogo.tsx` — renders `assets/images/kado-logo.jpeg`
+- **Currency**: ₪ (Israeli Shekel / NIS)
+- **Language**: Palestinian Arabic (Arab 48 dialect) + Hebrew
 
 ## Project Structure
 
