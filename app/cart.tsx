@@ -74,6 +74,7 @@ import GoogleMapWeb from '@/components/GoogleMapWeb';
 import GlassAlert, { GlassAlertConfig } from '@/components/GlassAlert';
 import CalendarPicker from '@/components/CalendarPicker';
 import { JanaAssistant } from '@/components/JanaCharacter';
+import KadoLoader from '@/components/KadoLoader';
 import { reverseGeocodeToAddress, reverseGeocodeToCity, LocationCoords } from '@/utils/location';
 import { selectedOptionsSignature } from '@/utils/cartLine';
 import { SavedAddress, Branch, DeliveryOption, CartItem } from '@/types';
@@ -1252,8 +1253,7 @@ export default function CartScreen() {
     <>
       {branchesLoading ? (
         <View style={[styles.noBranchContainer, { backgroundColor: colors.card, gap: 12 }]}>
-          <ActivityIndicator size="large" color={colors.primary} />
-          <Text style={[styles.noAddressText, { color: colors.textMuted }]}>{t('loading')}</Text>
+          <KadoLoader size={56} label={t('loading')} />
         </View>
       ) : activeBranches.length === 0 ? (
         <View style={[styles.noBranchContainer, { backgroundColor: colors.card }]}>
@@ -1918,7 +1918,7 @@ export default function CartScreen() {
                   startInLoadingState
                   renderLoading={() => (
                     <View style={[styles.noBranchContainer, { backgroundColor: colors.background }]}>
-                      <ActivityIndicator size="large" color={colors.primary} />
+                      <KadoLoader size={64} />
                     </View>
                   )}
                 />

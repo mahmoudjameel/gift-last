@@ -3,9 +3,10 @@ import { Stack, usePathname } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import React, { useEffect, useRef, useState } from "react";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
-import { ActivityIndicator, StyleSheet, View, I18nManager, Platform } from "react-native";
+import { StyleSheet, View, I18nManager, Platform } from "react-native";
 import { AppProvider, useApp } from "@/contexts/AppContext";
 import { PushNotificationBootstrap } from "@/components/PushNotificationBootstrap";
+import KadoLoader from "@/components/KadoLoader";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -104,9 +105,7 @@ function RootLayoutNav() {
       </Stack>
       {showRouteLoader && (
         <View pointerEvents="none" style={styles.routeLoaderOverlay}>
-          <View style={[styles.routeLoaderCard, { backgroundColor: colors.card }]}>
-            <ActivityIndicator size="small" color={colors.primary} />
-          </View>
+          <KadoLoader size={36} card />
         </View>
       )}
     </>

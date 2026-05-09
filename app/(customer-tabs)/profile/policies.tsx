@@ -26,12 +26,12 @@ export default function PoliciesScreen() {
   const { colors, t, isRTL } = useApp();
   const router = useRouter();
 
-  const menuItems: { key: string; title: string; icon: typeof ScrollText; iconColor: string; url: string }[] = [
-    { key: 'terms', title: t('termsOfService'), icon: ScrollText, iconColor: '#6366F1', url: 'https://glorda.com/terms' },
-    { key: 'privacy', title: t('privacyPolicy'), icon: ShieldCheck, iconColor: '#10B981', url: 'https://glorda.com/privacy' },
-    { key: 'faq', title: 'الأسئلة الشائعة', icon: CircleHelp, iconColor: '#8B5CF6', url: 'https://glorda.com/faq' },
-    { key: 'support', title: t('support'), icon: Headphones, iconColor: '#F59E0B', url: 'https://glorda.com/support' },
-    { key: 'about', title: t('aboutUs'), icon: Info, iconColor: '#3B82F6', url: 'https://glorda.com/about' },
+  const menuItems: { key: string; title: string; icon: typeof ScrollText; iconColor: string; page: string }[] = [
+    { key: 'terms', title: t('termsOfService'), icon: ScrollText, iconColor: '#6366F1', page: 'terms' },
+    { key: 'privacy', title: t('privacyPolicy'), icon: ShieldCheck, iconColor: '#10B981', page: 'privacy' },
+    { key: 'faq', title: 'الأسئلة الشائعة', icon: CircleHelp, iconColor: '#8B5CF6', page: 'faq' },
+    { key: 'support', title: t('support'), icon: Headphones, iconColor: '#F59E0B', page: 'support' },
+    { key: 'about', title: t('aboutUs'), icon: Info, iconColor: '#3B82F6', page: 'about' },
   ];
 
   return (
@@ -54,8 +54,8 @@ export default function PoliciesScreen() {
             style={[styles.policyCard, { backgroundColor: colors.card, borderColor: colors.borderLight, borderWidth: 1 }]}
             onPress={() =>
               router.push({
-                pathname: '/webview' as any,
-                params: { title: item.title, url: item.url },
+                pathname: '/kado-info' as any,
+                params: { title: item.title, page: item.page },
               })
             }
             activeOpacity={0.7}

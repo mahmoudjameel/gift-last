@@ -12,7 +12,7 @@ import {
 import { db } from "./firebase";
 
 const mapDocs = <T = DocumentData>(snap: any): T[] =>
-  snap.docs.map((d: any) => ({ id: d.id, ...d.data() })) as T[];
+  snap.docs.map((d: any) => ({ ...d.data(), id: d.id })) as T[];
 
 export async function getBanners() {
   const snap = await getDocs(collection(db, "banners"));

@@ -328,8 +328,12 @@ export default function AppSettings() {
       setEditingCategory(null);
       resetCategoryForm();
     },
-    onError: () => {
-      toast({ variant: "destructive", title: "فشل تحديث القسم" });
+    onError: (error: any) => {
+      toast({
+        variant: "destructive",
+        title: "فشل تحديث القسم",
+        description: error?.message || "حدث خطأ غير متوقع",
+      });
     }
   });
 

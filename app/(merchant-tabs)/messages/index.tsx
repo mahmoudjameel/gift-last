@@ -7,7 +7,6 @@ import {
   TouchableOpacity,
   StatusBar,
   TextInput,
-  ActivityIndicator,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Image } from 'expo-image';
@@ -15,6 +14,7 @@ import { Search, X, Trash2, CircleCheck, Circle, CircleUserRound } from 'lucide-
 import { useRouter } from 'expo-router';
 import { useApp } from '@/contexts/AppContext';
 import { Conversation } from '@/types';
+import KadoLoader from '@/components/KadoLoader';
 import { subscribeToMerchantDirectConversations, deleteDirectConversation, type DirectConversation } from '@/services/chat';
 
 function merchantPeerDisplayName(c: DirectConversation): string {
@@ -200,7 +200,7 @@ export default function MerchantMessagesScreen() {
 
       {loading && conversations.length === 0 ? (
         <View style={styles.loadingWrap}>
-          <ActivityIndicator size="large" color={colors.primary} />
+          <KadoLoader size={64} />
         </View>
       ) : (
         <FlatList

@@ -10,7 +10,6 @@ import {
   KeyboardAvoidingView,
   Platform,
   Alert,
-  ActivityIndicator,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Image } from 'expo-image';
@@ -19,6 +18,7 @@ import { useRouter, useLocalSearchParams } from 'expo-router';
 import { useApp } from '@/contexts/AppContext';
 import { ChatMessage } from '@/types';
 import * as ImagePicker from 'expo-image-picker';
+import KadoLoader from '@/components/KadoLoader';
 import {
   getDirectConversation,
   getDirectMessages,
@@ -109,7 +109,7 @@ export default function ChatScreen() {
   if (loading) {
     return (
       <View style={[styles.container, { backgroundColor: colors.background, justifyContent: 'center', alignItems: 'center' }]}>
-        <ActivityIndicator size="large" color={colors.primary} />
+        <KadoLoader size={64} />
       </View>
     );
   }

@@ -7,7 +7,6 @@ import {
   TouchableOpacity,
   StatusBar,
   TextInput,
-  ActivityIndicator,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Image } from 'expo-image';
@@ -16,6 +15,7 @@ import { useRouter } from 'expo-router';
 import { useApp } from '@/contexts/AppContext';
 import { Conversation } from '@/types';
 import { GuestLoginCard } from '@/components/GuestLoginPrompt';
+import KadoLoader from '@/components/KadoLoader';
 import { subscribeToCustomerDirectConversations, deleteDirectConversation, type DirectConversation } from '@/services/chat';
 
 function directToConversation(c: DirectConversation): Conversation {
@@ -197,7 +197,7 @@ export default function CustomerMessagesScreen() {
 
       {loading && conversations.length === 0 ? (
         <View style={styles.loadingWrap}>
-          <ActivityIndicator size="large" color={colors.primary} />
+          <KadoLoader size={64} />
         </View>
       ) : (
         <FlatList

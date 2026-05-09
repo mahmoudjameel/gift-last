@@ -17,6 +17,7 @@ import { useRouter } from 'expo-router';
 import { useApp } from '@/contexts/AppContext';
 import { getMerchantReviews, replyToReview, getCurrentMerchantId, type FirestoreReview } from '@/services/merchantFirestore';
 import { isFirebaseConfigured } from '@/services/firebase';
+import KadoLoader from '@/components/KadoLoader';
 
 type FilterType = 'all' | '5' | '4' | '3' | '2' | '1';
 
@@ -130,7 +131,7 @@ export default function ReviewsScreen() {
 
       {isLoading ? (
         <View style={styles.loadingContainer}>
-          <ActivityIndicator size="large" color={colors.primary} />
+          <KadoLoader size={64} />
         </View>
       ) : totalReviews === 0 ? (
         <View style={styles.emptyContainer}>

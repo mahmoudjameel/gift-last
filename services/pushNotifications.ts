@@ -18,7 +18,7 @@ Notifications.setNotificationHandler({
 export async function ensureAndroidNotificationChannel(): Promise<void> {
   if (Platform.OS === 'android') {
     await Notifications.setNotificationChannelAsync('default', {
-      name: 'Petalia',
+      name: 'KADO',
       importance: Notifications.AndroidImportance.HIGH,
       vibrationPattern: [0, 250, 250, 250],
       lightColor: '#E88AAE',

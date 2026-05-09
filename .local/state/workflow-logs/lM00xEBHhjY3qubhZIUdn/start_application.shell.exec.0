@@ -1,0 +1,58 @@
+[90mStarting project at /home/runner/workspace[39m
+[90mReact Compiler enabled[39m
+[2mStarting Metro Bundler[22m
+
+[31m[7m[1m ERROR [22m[27m[39m An unknown error occurred while installing React Native DevTools. Details:
+
+/home/runner/workspace/node_modules/@react-native/debugger-shell/bin/react-native-devtools: error while loading shared libraries: libglib-2.0.so.0: cannot open shared object file: No such file or directory
+
+Tunnel connected.
+Tunnel ready.
+[33mThe following packages should be updated for best compatibility with the installed [1mexpo[22m version:[39m
+[33m  [1mexpo[22m[36m@[39m[33m[31m55.0.4[39m[33m - expected version: [32m~55.0.23[39m[33m[39m
+[33m  [1mexpo-blur[22m[36m@[39m[33m[31m55.0.8[39m[33m - expected version: [32m~55.0.14[39m[33m[39m
+[33m  [1mexpo-clipboard[22m[36m@[39m[33m[31m55.0.8[39m[33m - expected version: [32m~55.0.13[39m[33m[39m
+[33m  [1mexpo-constants[22m[36m@[39m[33m[31m55.0.9[39m[33m - expected version: [32m~55.0.16[39m[33m[39m
+[33m  [1mexpo-device[22m[36m@[39m[33m[31m55.0.10[39m[33m - expected version: [32m~55.0.16[39m[33m[39m
+[33m  [1mexpo-font[22m[36m@[39m[33m[31m55.0.4[39m[33m - expected version: [32m~55.0.7[39m[33m[39m
+[33m  [1mexpo-haptics[22m[36m@[39m[33m[31m55.0.8[39m[33m - expected version: [32m~55.0.14[39m[33m[39m
+[33m  [1mexpo-image[22m[36m@[39m[33m[31m55.0.5[39m[33m - expected version: [32m~55.0.10[39m[33m[39m
+[33m  [1mexpo-image-picker[22m[36m@[39m[33m[31m55.0.10[39m[33m - expected version: [32m~55.0.20[39m[33m[39m
+[33m  [1mexpo-linear-gradient[22m[36m@[39m[33m[31m55.0.8[39m[33m - expected version: [32m~55.0.13[39m[33m[39m
+[33m  [1mexpo-linking[22m[36m@[39m[33m[31m55.0.7[39m[33m - expected version: [32m~55.0.15[39m[33m[39m
+[33m  [1mexpo-location[22m[36m@[39m[33m[31m55.1.2[39m[33m - expected version: [32m~55.1.9[39m[33m[39m
+[33m  [1mexpo-notifications[22m[36m@[39m[33m[31m55.0.13[39m[33m - expected version: [32m~55.0.22[39m[33m[39m
+[33m  [1mexpo-router[22m[36m@[39m[33m[31m55.0.3[39m[33m - expected version: [32m~55.0.14[39m[33m[39m
+[33m  [1mexpo-splash-screen[22m[36m@[39m[33m[31m55.0.10[39m[33m - expected version: [32m~55.0.20[39m[33m[39m
+[33m  [1mexpo-status-bar[22m[36m@[39m[33m[31m55.0.4[39m[33m - expected version: [32m~55.0.6[39m[33m[39m
+[33m  [1mexpo-symbols[22m[36m@[39m[33m[31m55.0.4[39m[33m - expected version: [32m~55.0.8[39m[33m[39m
+[33m  [1mexpo-system-ui[22m[36m@[39m[33m[31m55.0.9[39m[33m - expected version: [32m~55.0.17[39m[33m[39m
+[33m  [1mexpo-web-browser[22m[36m@[39m[33m[31m55.0.9[39m[33m - expected version: [32m~55.0.15[39m[33m[39m
+[33m  [1mreact-native[22m[36m@[39m[33m[31m0.83.2[39m[33m - expected version: [32m0.83.6[39m[33m[39m
+[33m  [1mreact-native-maps[22m[36m@[39m[33m[31m1.26.20[39m[33m - expected version: [32m1.27.2[39m[33m[39m
+[33mYour project may not work correctly until you install the expected versions of the packages.[39m
+▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+█ ▄▄▄▄▄ █▀ █▀▀█▀▀▄▀▀▄ █ ▄▄▄▄▄ █
+█ █   █ █▀ ▄ █▀ ▀▀▀▀█ █ █   █ █
+█ █▄▄▄█ █▀█ █▄▀█▀ ▄▄▄ █ █▄▄▄█ █
+█▄▄▄▄▄▄▄█▄█▄█ █ ▀▄█▄▀ █▄▄▄▄▄▄▄█
+█  ▄▄ ▀▄▄  ▄█▄▄ █▀ ▄ ▀▄▀ ▀▄▀▄▀█
+█ ▄▄ ▄ ▄▀▀ ▀ ▄█▄ ▀█ █ ▄▄███▄ ██
+██ ▀ ▀▀▄█▀ ▀▄▀▀█▄▀▄▄ ▀ ▀▀▀▀ ▄▀█
+█▀█▀  ▀▄▀▀▀ █▀ ▄▄▀█ █▄█▄██▄▄▀██
+█ █▄▀▄▄▄▄█  █▄█▄██ ▄  ▀▀ ▀▀ ▄ █
+█ ██▀▄▀▄███▄ ▄█▀ ██ ▀▀▄██▀ ▄███
+█▄█▄███▄▄▀▄█▄▀▀▀▄ ▄▄▄ ▄▄▄ ▀ ▀▀█
+█ ▄▄▄▄▄ █▄█▀█▀ ▄ ██▄  █▄█ ▄██▀█
+█ █   █ █ █ █▄█▄█   ▀ ▄▄ ▄ ▄▀▀█
+█ █▄▄▄█ █ █  ▄█▀  ▄▀▄ ▄  ▄ ▄ ██
+█▄▄▄▄▄▄▄█▄▄▄▄███▄█▄█▄█▄▄▄▄▄▄███
+
+[2m› Scan the QR code above to open in [1mExpo Go[22m[2m.[22m
+› Metro: [4mexp://m7wrzjy-anonymous-8081.exp.direct[24m
+› Web: [4mhttp://localhost:8081[24m
+
+› Using [36mExpo Go[39m [2m(Press [22m[2m[1ms[22m[22m[2m to switch to development build)[22m
+› Press [1m?[22m [2m│[22m show all commands
+
+Logs for your project will appear below.[2m Press Ctrl+C to exit.[22m

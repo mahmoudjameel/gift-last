@@ -4,7 +4,7 @@ import createContextHook from '@nkzw/create-context-hook';
 import { UserRole, CartItem, Product, User, Language, Occasion, StoreInfo, ThemeColors, EntityType, Order, SavedAddress, WalletTransaction, AppNotification } from '@/types';
 import { lightColors, darkColors } from '@/constants/colors';
 import { translate } from '@/constants/i18n';
-import { getCurrentLocation, reverseGeocodeToCity, getDistance, findNearestMajorCity, LocationCoords } from '@/utils/location';
+import { getCurrentLocation, reverseGeocodeToCity, getDistance, findNearestMajorCity, reverseGeocodeToAreaLabel, LocationCoords } from '@/utils/location';
 import { selectedOptionsSignature } from '@/utils/cartLine';
 import { categories as mockCategories } from '@/mocks/categories';
 import { getCategories, getProductsFromFirestore, getBanners, getMerchantsFromFirestore, type FirestoreStore } from '@/services/firestore';
@@ -416,13 +416,26 @@ export const [AppProvider, useApp] = createContextHook(() => {
           const majorCity = findNearestMajorCity(coords, language);
           setLocationCity(majorCity);
           const savedCity = await AsyncStorage.getItem(CITY_KEY);
+          const savedLabel = await AsyncStorage.getItem(DELIVERY_LABEL_KEY);
+          const labelLooksAutoDetected =
+            !savedLabel || savedLabel.trim() === '' || savedLabel.trim() === (savedCity || '').trim() || savedLabel.trim() === majorCity.trim();
+
           if (!savedCity || savedCity === 'all') {
+            const areaLabel = await reverseGeocodeToAreaLabel(coords, language).catch(() => '');
+            const displayLabel = (areaLabel || '').trim() || majorCity;
             setSelectedCityState(majorCity);
-            setDeliveryDisplayLabelState(majorCity);
+            setDeliveryDisplayLabelState(displayLabel);
             await AsyncStorage.setItem(CITY_KEY, majorCity);
-            await AsyncStorage.setItem(DELIVERY_LABEL_KEY, majorCity);
+            await AsyncStorage.setItem(DELIVERY_LABEL_KEY, displayLabel);
             await AsyncStorage.setItem('selected_coords', JSON.stringify(coords));
             setSelectedCoords(coords);
+          } else if (labelLooksAutoDetected) {
+            const areaLabel = await reverseGeocodeToAreaLabel(coords, language).catch(() => '');
+            const next = (areaLabel || '').trim();
+            if (next && next !== savedLabel) {
+              setDeliveryDisplayLabelState(next);
+              await AsyncStorage.setItem(DELIVERY_LABEL_KEY, next);
+            }
           }
           await AsyncStorage.setItem(USER_LOCATION_KEY, JSON.stringify({ coords, city: majorCity }));
         }

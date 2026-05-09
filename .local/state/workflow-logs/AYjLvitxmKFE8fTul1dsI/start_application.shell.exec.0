@@ -1,0 +1,32 @@
+
+> expo-app@1.0.0 web
+> expo start --port 5000 --tunnel
+
+[1G[0K[90mStarting project at /home/runner/workspace[39m
+[90mReact Compiler enabled[39m
+[2mStarting Metro Bundler[22m
+
+Tunnel connected.
+Tunnel ready.
+/home/runner/workspace/node_modules/@expo/cli/build/src/utils/errors.js:130
+    throw error;
+    ^
+
+Error: ENOSPC: System limit for number of file watchers reached, watch '/home/runner/workspace/node_modules/@expo/ws-tunnel/build/utils'
+[90m    at FSWatcher.<computed> (node:internal/fs/watchers:247:19)[39m
+[90m    at Object.watch (node:fs:2503:36)[39m
+    at FallbackWatcher._watchdir [90m(/home/runner/workspace/[39mnode_modules/[4mmetro-file-map[24m/src/watchers/FallbackWatcher.js:119:33[90m)[39m
+    at [90m/home/runner/workspace/[39mnode_modules/[4mmetro-file-map[24m/src/watchers/FallbackWatcher.js:54:16
+    at Walker.<anonymous> [90m(/home/runner/workspace/[39mnode_modules/[4mmetro-file-map[24m/src/watchers/FallbackWatcher.js:358:5[90m)[39m
+[90m    at Walker.emit (node:events:524:28)[39m
+    at [90m/home/runner/workspace/[39mnode_modules/[4mwalker[24m/lib/walker.js:69:16
+[90m    at FSReqCallback.oncomplete (node:fs:187:23)[39m {
+  errno: [33m-28[39m,
+  syscall: [32m'watch'[39m,
+  code: [32m'ENOSPC'[39m,
+  path: [32m'/home/runner/workspace/node_modules/@expo/ws-tunnel/build/utils'[39m,
+  filename: [32m'/home/runner/workspace/node_modules/@expo/ws-tunnel/build/utils'[39m
+}
+
+Node.js v20.20.0
+[1G[0K⠙[1G[0K

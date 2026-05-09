@@ -1,0 +1,9 @@
+
+> rest-express@1.0.0 dev
+> NODE_ENV=development tsx server/index.ts
+
+[1G[0K✅ Firebase Admin SDK initialized
+8:05:17 AM [express] serving on port 5000
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+[RUNTIME_ERROR]{"type":"runtime-error","timestamp":1778313925282,"name":"Error","message":"Firebase: Error (auth/invalid-api-key).","stack":"\n\n\n\n\n\n\n    at /home/runner/workspace/panelglorda/client/src/lib/firebase.ts:27:21","loc":{"line":27,"column":21,"file":"/home/runner/workspace/panelglorda/client/src/lib/firebase.ts"},"frame":"25 |  // Initialize Firebase core services\n26 |  export const app = initializeApp(firebaseConfig);\n27 |  export const auth = getAuth(app);\n   |                      ^\n28 |  export const db = getFirestore(app);\n29 |  export const storage = getStorage(app);"}
+[1G[0K⠙[1G[0K

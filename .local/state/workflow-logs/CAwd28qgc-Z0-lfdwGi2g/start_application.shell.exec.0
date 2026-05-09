@@ -1,0 +1,31 @@
+[90mStarting project at /home/runner/workspace[39m
+[90mReact Compiler enabled[39m
+[2mStarting Metro Bundler[22m
+
+[31m[7m[1m ERROR [22m[27m[39m An unknown error occurred while installing React Native DevTools. Details:
+
+/home/runner/workspace/node_modules/@react-native/debugger-shell/bin/react-native-devtools: error while loading shared libraries: libglib-2.0.so.0: cannot open shared object file: No such file or directory
+
+Tunnel connected.
+Tunnel ready.
+/home/runner/workspace/node_modules/@expo/cli/build/src/utils/errors.js:130
+    throw error;
+    ^
+
+Error: ENOSPC: System limit for number of file watchers reached, watch '/home/runner/workspace/node_modules/@eslint/eslintrc/dist'
+[90m    at FSWatcher.<computed> (node:internal/fs/watchers:247:19)[39m
+[90m    at Object.watch (node:fs:2503:36)[39m
+    at FallbackWatcher._watchdir [90m(/home/runner/workspace/[39mnode_modules/[4mmetro-file-map[24m/src/watchers/FallbackWatcher.js:119:33[90m)[39m
+    at [90m/home/runner/workspace/[39mnode_modules/[4mmetro-file-map[24m/src/watchers/FallbackWatcher.js:54:16
+    at Walker.<anonymous> [90m(/home/runner/workspace/[39mnode_modules/[4mmetro-file-map[24m/src/watchers/FallbackWatcher.js:358:5[90m)[39m
+[90m    at Walker.emit (node:events:524:28)[39m
+    at [90m/home/runner/workspace/[39mnode_modules/[4mwalker[24m/lib/walker.js:69:16
+[90m    at FSReqCallback.oncomplete (node:fs:187:23)[39m {
+  errno: [33m-28[39m,
+  syscall: [32m'watch'[39m,
+  code: [32m'ENOSPC'[39m,
+  path: [32m'/home/runner/workspace/node_modules/@eslint/eslintrc/dist'[39m,
+  filename: [32m'/home/runner/workspace/node_modules/@eslint/eslintrc/dist'[39m
+}
+
+Node.js v20.20.0

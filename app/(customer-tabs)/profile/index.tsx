@@ -9,7 +9,7 @@ import {
   Modal,
   Animated,
 } from 'react-native';
-import PetaliaLogo from '@/components/PetaliaLogo';
+import KadoLogo from '@/components/KadoLogo';
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Image as ExpoImage } from 'expo-image';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -230,7 +230,7 @@ export default function ProfileScreen() {
         <View style={styles.overlay}>
           <Animated.View style={[styles.switchContent, { opacity: switchAnim }]}>
             <Animated.View style={{ transform: [{ rotateY: logoFlip }] }}>
-              <PetaliaLogo size={90} color="#D91568" />
+              <KadoLogo size={90} />
             </Animated.View>
             <Text style={styles.switchText}>{switchTitle}</Text>
           </Animated.View>

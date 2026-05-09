@@ -1,9 +1,10 @@
 import React from 'react';
-import { View, StyleSheet, ActivityIndicator } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import { Tabs } from 'expo-router';
 import { House, Heart, MessageSquareText, CircleUserRound } from 'lucide-react-native';
 import CustomTabBar from '@/components/CustomTabBar';
 import { useApp } from '@/contexts/AppContext';
+import KadoLoader from '@/components/KadoLoader';
 
 export default function CustomerTabLayout() {
   const { t, isLoading, colors } = useApp();
@@ -50,7 +51,7 @@ export default function CustomerTabLayout() {
           style={[styles.loadingOverlay, { backgroundColor: colors.background }]}
           pointerEvents="auto"
         >
-          <ActivityIndicator size="large" color={colors.primary} />
+          <KadoLoader size={72} />
         </View>
       ) : null}
     </View>

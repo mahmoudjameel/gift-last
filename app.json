@@ -1,24 +1,24 @@
 {
   "expo": {
-    "name": "Petalia",
-    "slug": "Petalia",
+    "name": "KADO",
+    "slug": "KADO",
     "version": "2.1.0",
     "orientation": "portrait",
     "newArchEnabled": true,
     "icon": "./assets/images/icon.png",
-    "scheme": "Petalia",
+    "scheme": "KADO",
     "userInterfaceStyle": "automatic",
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "app.Petalia.marketplace",
+      "bundleIdentifier": "app.KADO.marketplace",
       "buildNumber": "2.1.0",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false,
-        "NSPhotoLibraryUsageDescription": "Petalia needs access to your photo library to let you upload a profile picture and share product images or documents in the chat.",
-        "NSCameraUsageDescription": "Petalia needs access to your camera to let you take a profile picture or capture photos to share with other users in the chat.",
-        "NSCalendarUsageDescription": "Petalia needs access to your calendar to help you save and track important order dates and occasions.",
-        "NSLocationWhenInUseUsageDescription": "Petalia uses your location to show the map, suggest delivery addresses, and find nearby stores.",
-        "NSLocationAlwaysAndWhenInUseUsageDescription": "Petalia uses your location to show the map and delivery options while you use the app."
+        "NSPhotoLibraryUsageDescription": "KADO needs access to your photo library to let you upload a profile picture and share product images or documents in the chat.",
+        "NSCameraUsageDescription": "KADO needs access to your camera to let you take a profile picture or capture photos to share with other users in the chat.",
+        "NSCalendarUsageDescription": "KADO needs access to your calendar to help you save and track important order dates and occasions.",
+        "NSLocationWhenInUseUsageDescription": "KADO uses your location to show the map, suggest delivery addresses, and find nearby stores.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "KADO uses your location to show the map and delivery options while you use the app."
       },
       "config": {
         "googleMapsApiKey": "AIzaSyAoABx4uMQu5JPa21VMFPKBJQoXBWJxLro"
@@ -39,7 +39,7 @@
         "android.permission.ACCESS_FINE_LOCATION"
       ],
       "predictiveBackGestureEnabled": false,
-      "package": "app.Petalia.marketplace",
+      "package": "app.KADO.marketplace",
       "versionCode": 2,
       "googleServicesFile": "./google-services.json",
       "config": {
@@ -76,7 +76,7 @@
       [
         "expo-location",
         {
-          "locationWhenInUsePermission": "Petalia uses your location for the map and delivery address.",
+          "locationWhenInUsePermission": "KADO uses your location for the map and delivery address.",
           "isAndroidBackgroundLocationEnabled": false
         }
       ],
@@ -87,7 +87,7 @@
           "color": "#ffffff",
           "mode": "production",
           "androidMode": "default",
-          "androidCollapsedTitle": "Petalia"
+          "androidCollapsedTitle": "KADO"
         }
       ],
       "@react-native-community/datetimepicker"

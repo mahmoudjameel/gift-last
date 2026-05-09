@@ -11,7 +11,7 @@ import {
   Animated,
   Share,
 } from 'react-native';
-import PetaliaLogo from '@/components/PetaliaLogo';
+import KadoLogo from '@/components/KadoLogo';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Image as ExpoImage } from 'expo-image';
 import {
@@ -360,7 +360,7 @@ export default function MerchantStoreScreen() {
         <View style={styles.switchOverlay}>
           <Animated.View style={[styles.switchModalContent, { opacity: switchAnim }]}>
             <Animated.View style={{ transform: [{ rotateY: logoFlip }] }}>
-              <PetaliaLogo size={90} color="#D91568" />
+              <KadoLogo size={90} />
             </Animated.View>
             <Text style={[styles.switchModalText, { color: '#FFF' }]}>{t('switchingToCustomer')}</Text>
           </Animated.View>

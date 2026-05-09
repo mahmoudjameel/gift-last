@@ -182,10 +182,14 @@ export default function CustomerHome() {
     if (selectedCategory !== '0') {
       const cat = categories.find(c => c.id === selectedCategory);
       if (cat) {
-        return language === 'ar' ? `${cat.name} رائجة في ${currentCityName}` : `Trending ${cat.nameEn} in ${currentCityName}`;
+        return language === 'ar'
+          ? `الأكثر مبيعاً من ${cat.name} في ${currentCityName}`
+          : `${cat.nameEn} הנמכרים ביותר ב${currentCityName}`;
       }
     }
-    return language === 'ar' ? `منتجات رائجة في ${currentCityName}` : `Trending in ${currentCityName}`;
+    return language === 'ar'
+      ? `الأكثر مبيعاً في ${currentCityName}`
+      : `הנמכרים ביותר ב${currentCityName}`;
   }, [selectedCategory, language, categories, currentCityName]);
 
   const mixedProductsSectionTitle = useMemo(() => {
